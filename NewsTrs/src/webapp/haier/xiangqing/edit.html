@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>风云现三国</title>
+
+    <script type="text/javascript" src="JS/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#b05").click(function(){
+                $.getJSON("http://localhost:8080/hello/get",
+                        {"name":$("#b05_1").attr("value")},   //向后台传递参数  商品的名称！！！
+                        function(data) {
+                            $("#myDiv5").html("");
+                            $.each(data, function(i, item) {
+                                $("#myDiv5").append(
+                   "<div style='border: aqua 2px'>大神" + (i+1) +":"+ item.content+ "</div>"+"</br>")
+                                       ;
+                            });
+                        });
+            });
+
+            $("#b06").click(function(){
+                $.getJSON("http://localhost:8080/hello/save",
+                        {name:$("#b05_1").attr("value"),content:$("input[id='b06_1']").val()},   //向后台传递参数  商品的名称,商品评价！！！！
+                        function(data) {
+                            $("#b06_1").val("");
+                            $.each(data, function(i, item) {
+
+                            });
+                        });
+            });
+
+        })
+    </script>
+</head>
+<body>
+<div style="margin:0 auto; width:950px;">
+<img src="img/xiuluo.jpg" border=1px width="140" height="140" style="position: absolute;left: 0px;top:0px" />
+<h1>
+    作者：善良的蜜蜂
+    类型：玄幻奇幻
+    状态：连载中
+    简介：论潜力，不算天才，可玄功武技，皆可无师自通。论实力，任凭你有万千至宝，但定不敌我界灵大军。我是谁？天...
+    最新更新：第两千七百一十三章 二品真仙</h1>
+
+<div id="myDiv5"><h2>评论内容</h2></div>
+<input id="b05_1" type="hidden" name="content" title="Content" value="牙膏" /><br/>
+<button id="b05" type="button">显示更多</button><br/>
+
+大神点评：<input id="b06_1" type="text" name="text" title="Content" />
+<button id="b06" type="button">提交：</button>
+
+</div>
+</body>
+</html>

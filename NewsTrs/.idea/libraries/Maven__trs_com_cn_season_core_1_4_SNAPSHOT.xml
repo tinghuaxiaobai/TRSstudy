@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: trs.com.cn:season-core:1.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/trs/com/cn/season-core/1.4-SNAPSHOT/season-core-1.4-20161114.100207-63.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/trs/com/cn/season-core/1.4-SNAPSHOT/season-core-1.4-20161114.100207-63-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/trs/com/cn/season-core/1.4-SNAPSHOT/season-core-1.4-20161114.100207-63-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
