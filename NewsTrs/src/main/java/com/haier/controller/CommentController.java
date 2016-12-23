@@ -45,5 +45,23 @@ public class CommentController extends Controller{
             renderText("缺少参数值！");
         }
 
+      @ActionKey("update")
+     public void updateComment(){
+        int icommentId = Integer.valueOf(getPara("id"));
+        String scommentContent=getPara("content");
+        Date odate=new Date();
+        Comment comment=new Comment();
+        comment.setId(icommentId);
+        comment.setContent(scommentContent);
+        commentService.updateComment(comment);
+
+    }
+    @ActionKey("delete")
+    public void deleteComment() {
+        int icommentId = Integer.valueOf(getPara("id"));
+        commentService.deleteComment(icommentId);
+        return;
+    }
+        
     }
 }
