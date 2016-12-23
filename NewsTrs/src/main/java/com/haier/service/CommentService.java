@@ -23,9 +23,18 @@ public class CommentService {
     }
 
    //保存评论
+ public List<Comment> getCommentAll(){
+       return   commentDao.getCommentAll();
+    }
 
     public Comment saveComment(Comment comment){
         return commentDao.saveComment(comment);
     }
+    public  Comment updateComment(Comment comment){
+        return  commentDao.updateComment(comment);
+    }
+    public void deleteComment(int id){
+        commentDao.deleteCommentId(id);
 
+    }
 }
