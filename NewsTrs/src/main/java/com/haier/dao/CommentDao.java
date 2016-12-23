@@ -24,4 +24,14 @@ public class CommentDao {
     public Comment saveComment(Comment comment){
         return comment.save();
     }
+    
+     public Comment updateComment(Comment comment){
+        return comment.update("content");
+    }
+
+
+    public void deleteCommentId(int id){
+        Dao.deleteById(Comment.class,id);
+    }
+
 }
